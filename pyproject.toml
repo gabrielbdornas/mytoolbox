@@ -40,3 +40,5 @@ use_vars = true
 [tool.taskipy.tasks]
 blue = { cmd = "blue .", help = "Format code style with blue." }
 blue-check = { cmd = "blue --check --diff .", help = "Check code style with blue." }
+isort = { cmd = "isort .", help = "Format code imports with isort." }
+isort-check = { cmd = "isort --check --diff .", help = "Check code imports with isort." }
