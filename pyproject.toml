@@ -40,9 +40,12 @@ mkdocstrings-python = "^0.8.3"
 use_vars = true
 
 [tool.taskipy.variables]
+lint-check = "--check --diff ."
 
 [tool.taskipy.tasks]
 blue = { cmd = "blue .", help = "Format code style with blue." }
-blue-check = { cmd = "blue --check --diff .", help = "Check code style with blue." }
+blue-check = { cmd = "blue {lint-check}", help = "Check code style with blue." }
 isort = { cmd = "isort .", help = "Format code imports with isort." }
-isort-check = { cmd = "isort --check --diff .", help = "Check code imports with isort." }
+isort-check = { cmd = "isort {lint-check}", help = "Check code imports with isort." }
+lint = { cmd = "task blue && task isort", help = "Code lint with blue and isort." }
+lint-check = { cmd = "task blue-check && task isort-check", help = "Code lint checks with blue and isort." }
