@@ -38,6 +38,5 @@ use_vars = true
 [tool.taskipy.variables]
 
 [tool.taskipy.tasks]
-blue = { cmd = "blue --check .", help = "Check code style with blue." }
-blue --check .
-
+blue = { cmd = "blue .", help = "Format code style with blue." }
+blue-check = { cmd = "blue --check .", help = "Check code style with blue." }
