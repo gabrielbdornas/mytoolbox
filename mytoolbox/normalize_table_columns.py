@@ -3,6 +3,8 @@ import re
 
 
 def snake_small_case(column):
+	"""
+	"""
 	column_lower = column.lower()
 	column_unidecode = unidecode(column_lower)
 	column_alphanumeric = re.sub('[^A-Za-z0-9]+', ' ', column_unidecode)
