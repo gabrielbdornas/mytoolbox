@@ -1,4 +1,5 @@
 import pytest
+
 from mytoolbox.normalize_table_columns import snake_small_case
 
 

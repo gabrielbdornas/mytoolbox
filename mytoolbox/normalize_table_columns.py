@@ -1,5 +1,6 @@
-from unidecode import unidecode
 import re
+
+from unidecode import unidecode
 
 
 def snake_small_case(column):
