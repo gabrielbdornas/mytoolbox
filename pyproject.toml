@@ -51,5 +51,6 @@ isort-check = { cmd = "isort {lint-check}", help = "Check code imports with isor
 lint = { cmd = "task blue && task isort", help = "Code lint with blue and isort." }
 lint-check = { cmd = "task blue-check && task isort-check", help = "Code lint checks with blue and isort." }
 test = { cmd = "pytest -s -x", help = "Run pytests with better messages and stop after first error." }
-test-cov = { cmd = "pytest --cov=mytoolbox", help = "Run test coverage report." }
+test-cov = { cmd = "pytest --cov=mytoolbox && coverage html", help = "Run test coverage report." }
 test-cov-clean = { cmd = "pytest --cov=mytoolbox | grep TOTAL", help = "Run test coverage percentage result." }
+test-cov-html = { cmd = "coverage html", help = "Create coverage report html." }
