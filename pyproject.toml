@@ -50,3 +50,4 @@ isort = { cmd = "isort .", help = "Format code imports with isort." }
 isort-check = { cmd = "isort {lint-check}", help = "Check code imports with isort." }
 lint = { cmd = "task blue && task isort", help = "Code lint with blue and isort." }
 lint-check = { cmd = "task blue-check && task isort-check", help = "Code lint checks with blue and isort." }
+test = { cmd = "pytest -s -x", help = "Run pytests with better messages and stop after first error." }
