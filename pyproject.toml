@@ -43,6 +43,7 @@ use_vars = true
 lint-check = "--check --diff ."
 
 [tool.taskipy.tasks]
+doc-server = { cmd = "mkdocs serve", help = "Start local mkdocs documentation server." }
 blue = { cmd = "blue .", help = "Format code style with blue." }
 blue-check = { cmd = "blue {lint-check}", help = "Check code style with blue." }
 isort = { cmd = "isort .", help = "Format code imports with isort." }
