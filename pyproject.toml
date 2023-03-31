@@ -44,13 +44,27 @@ lint-check = "--check --diff ."
 
 [tool.taskipy.tasks]
 doc-server = { cmd = "mkdocs serve", help = "Start local mkdocs documentation server." }
+
 blue = { cmd = "blue .", help = "Format code style with blue." }
+
 blue-check = { cmd = "blue {lint-check}", help = "Check code style with blue." }
+
 isort = { cmd = "isort .", help = "Format code imports with isort." }
+
 isort-check = { cmd = "isort {lint-check}", help = "Check code imports with isort." }
+
 lint = { cmd = "task blue && task isort", help = "Code lint with blue and isort." }
+
 lint-check = { cmd = "task blue-check && task isort-check", help = "Code lint checks with blue and isort." }
+
+pre_test = { cmd = "task lint", help = "Run lint before tests." }
+
 test = { cmd = "pytest -s -x", help = "Run pytests with better messages and stop after first error." }
+
 test-cov = { cmd = "pytest --cov=mytoolbox && coverage html", help = "Run test coverage report." }
+
 test-cov-clean = { cmd = "pytest --cov=mytoolbox | grep TOTAL", help = "Run test coverage percentage result." }
+
 test-cov-html = { cmd = "coverage html", help = "Create coverage report html." }
+
+post_test = { cmd = "task test-cov-html", help = "Create coverage report after test." }
